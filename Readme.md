@@ -21,8 +21,8 @@ cmake -G Xcode
 
 #### 3. Build avrocpp_s for iOS simulator and Device targets
 ```
-xcodebuild -target avrocpp_s -config Release -sdk iphoneos
-xcodebuild -target avrocpp_s -config Release -sdk iphonesimulator
+xcodebuild -target avrocpp_s -config RelWithDebInfo -sdk iphoneos
+xcodebuild -target avrocpp_s -config RelWithDebInfo -sdk iphonesimulator
 ```
 
 #### 4. Lipo those suckers
