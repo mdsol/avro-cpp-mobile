@@ -15,3 +15,6 @@ xcuserdata
 *.moved-aside
 DerivedData
 *.xcuserstate
+
+# untar'd dir
+avro-cpp-1.7.7/
