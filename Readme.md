@@ -1,6 +1,6 @@
 ### iOS Instructions
 
-##### 0. Untar the Avro-CPP sources into the dir
+#### 0. Untar the Avro-CPP sources into the dir
 ```
 tar zxvf avro-cpp-1.7.7.tar.gz
 cd avro-cpp-1.7.7
