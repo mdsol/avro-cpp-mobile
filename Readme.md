@@ -2,7 +2,7 @@
 
 #### 0. Untar the Avro-CPP sources into the dir
 ```
-tar zxvf avro-cpp-1.7.7.tar.gz
+tar zxvf avro-cpp-1.7.7.tar
 cd avro-cpp-1.7.7
 ```
 
@@ -37,7 +37,8 @@ RelWithDebInfo-iphonesimulator/libavrocpp_s.a \
 #### 5. Stick it in the prebuilt lib
 
 ```
-mv libavrocpp.a ../prebuilt/lib/ios/libavrocpp.a
+mv libavrocpp.a ../prebuilt/ios/libavrocpp.a
+
 ```
 
 ##### 6. Update the header files
