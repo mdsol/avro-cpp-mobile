@@ -8,7 +8,7 @@ cd avro-cpp-1.7.7
 
 #### 1. Apply the `update_file_writer` patch
 
-`git apply update_file_writer.patch`
+`patch -p 1 < ../update_file_writer.patch`
 
 #### 2. Generate XCode project using CMake
 
@@ -19,9 +19,12 @@ cmake -G Xcode
 ```
 
 #### 3. Open XCode Project and ....
-  - change `Base SDK` for the project to iOS
+  - change `Base SDK` for the project to latest iOS
+  - change  `Supported Platforms` to iOS
   - replace all `Valid Architectures` with `$(ARCHS_STANDARD)`
   - set `Build Active Architectures Only` to `NO`
+  - set `Deployment Target` to the base iOS version to support
+  - set `Inline Methods Hidden` and `Symbols Hidden by Default` to `YES`
 
 #### 4. Build avrocpp_s for iOS simulator and Device targets
 ```
