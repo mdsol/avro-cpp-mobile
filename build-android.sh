@@ -27,6 +27,9 @@ do
   # For each architecture
   pushd $AVRO_FULL  
 
+  # Apply the necessary patch
+  patch -p 1 < ../update_file_writer.patch
+
   # Set toolchain to create based on selected architecture
   if [ $ARCHI == "armv7" ] 
   then
