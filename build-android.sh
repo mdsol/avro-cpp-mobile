@@ -10,7 +10,7 @@ NDK_TOOLS_DIR=$NDK_HOME/build/tools
 CMOSS_DIR=$TOPDIR/../cmoss/prebuilts
 
 # List of architectures for which to build Avro
-declare -a ARCHITECTURES=("armv7" "x86")
+declare -a ARCHITECTURES=("arm" "x86")
 
 # Build Avro for each architecture  
 for ARCHI in "${ARCHITECTURES[@]}"
@@ -31,7 +31,7 @@ do
   patch -p 1 < ../update_file_writer.patch
 
   # Set toolchain to create based on selected architecture
-  if [ $ARCHI == "armv7" ] 
+  if [ $ARCHI == "arm" ]
   then
     TOOLCHAIN="arm-linux-androideabi-4.9"
   else
