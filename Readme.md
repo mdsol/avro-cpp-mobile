@@ -25,7 +25,6 @@ cmake -G Xcode
   - set `Build Active Architectures Only` to `NO`
   - set `Deployment Target` to the base iOS version to support
   - set `Inline Methods Hidden` and `Symbols Hidden by Default` to `YES`
-  - set `Enable Bitcode` to `NO`
 
 #### 4. Build avrocpp_s for iOS simulator and Device targets
 ```
