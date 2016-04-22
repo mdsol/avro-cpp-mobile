@@ -28,8 +28,8 @@ cmake -G Xcode
 
 #### 4. Build avrocpp_s for iOS simulator and Device targets
 ```
-xcodebuild -target avrocpp_s -config RelWithDebInfo -sdk iphoneos
-xcodebuild -target avrocpp_s -config RelWithDebInfo -sdk iphonesimulator
+xcodebuild BITCODE_GENERATION_MODE=bitcode -target avrocpp_s -config RelWithDebInfo -sdk iphoneos
+xcodebuild BITCODE_GENERATION_MODE=bitcode -target avrocpp_s -config RelWithDebInfo -sdk iphonesimulator
 ```
 
 #### 5. Lipo those suckers
