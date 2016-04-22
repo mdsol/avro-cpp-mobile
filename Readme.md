@@ -25,12 +25,11 @@ cmake -G Xcode
   - set `Build Active Architectures Only` to `NO`
   - set `Deployment Target` to the base iOS version to support
   - set `Inline Methods Hidden` and `Symbols Hidden by Default` to `YES`
-  - click the '+' to add a `User-Defined Setting` with the name `BITCODE_GENERATION_MODE` and the value `bitcode`
 
 #### 4. Build avrocpp_s for iOS simulator and Device targets
 ```
-xcodebuild -target avrocpp_s -config RelWithDebInfo -sdk iphoneos
-xcodebuild -target avrocpp_s -config RelWithDebInfo -sdk iphonesimulator
+xcodebuild BITCODE_GENERATION_MODE=bitcode -target avrocpp_s -config RelWithDebInfo -sdk iphoneos
+xcodebuild BITCODE_GENERATION_MODE=bitcode -target avrocpp_s -config RelWithDebInfo -sdk iphonesimulator
 ```
 
 #### 5. Lipo those suckers
